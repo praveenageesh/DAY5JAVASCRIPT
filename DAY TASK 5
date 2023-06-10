@@ -1,0 +1,39 @@
+1.for the given JSON iterate over all for loops (for,for in,for of,foreach
+
+
+const data = {
+  "key1": "value1",
+  "key2": "value2",
+  "key3": "value3"
+};
+
+// for loop
+console.log("Using for loop:");
+for (let key in data) {
+  if (data.hasOwnProperty(key)) {
+    let value = data[key];
+    console.log(`Key: ${key}, Value: ${value}`);
+  }
+}
+
+// for...in loop
+console.log("Using for...in loop:");
+for (let key in data) {
+  if (data.hasOwnProperty(key)) {
+    let value = data[key];
+    console.log(`Key: ${key}, Value: ${value}`);
+  }
+}
+
+// for...of loop
+console.log("Using for...of loop:");
+const entries = Object.entries(data);
+for (let [key, value] of entries) {
+  console.log(`Key: ${key}, Value: ${value}`);
+}
+
+// forEach loop
+console.log("Using forEach loop:");
+Object.entries(data).forEach(([key, value]) => {
+  console.log(`Key: ${key}, Value: ${value}`);
+});
